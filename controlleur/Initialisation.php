@@ -1,12 +1,13 @@
 <?php
-include '..\model\Joueur.php';
-include '..\model\Question.php';
+include '..\model\package.php';
 
-//$nomEleve = $_GET[""]
+$nomEleve = $_GET['nom'];
+$prenomEleve = $_GET['prenom'];
 
-$nomEleve = 'toto';
+$vieDefaut = 3;
 
-$unJoueur = new Joueur($nomEleve);
+
+$unJoueur = new Joueur($nomEleve, $prenomEleve, $vieDefaut);
 
 $ListeQuestion = [ 
 		$question1	= new Question() ,
