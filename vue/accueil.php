@@ -30,14 +30,14 @@
 
     <div class="container">
 
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Entrer votre nom et prénom</h2>
+      <form class="form-signin" action="controlleur/initialisation.php">
+        <h2 class="form-signin-heading">Entrer votre nom et pr&eacute;nom</h2>
         <div class="col-xs-6 col-md-6 col-md-offset-1">
-        	Nom :
+        	<label for="nom">Nom :</label>
         	<input type="text" id="nom" class="form-control" placeholder="" required autofocus>
     	</div>
     	<div class="col-xs-6 col-md-6 col-md-offset-1">
-        	Prénom :
+        	<label for="nom">Pr&eacute;nom :</label>
         	<input type="text" id="prenom" class="form-control" placeholder="" required>
     	</div>
         <div class="checkbox">

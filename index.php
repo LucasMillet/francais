@@ -1,5 +1,5 @@
 <?php
-include "./vue/acceuil.php";
+include "./vue/accueil.php";
 
 
 ?>
