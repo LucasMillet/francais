@@ -9,7 +9,7 @@ $vieDefaut = 3;
 
 $unJoueur = new Joueur($nomEleve, $prenomEleve, $vieDefaut);
 
-$Question = $Liste.GetUneQuestion(1);
+$Question = $Liste.GetUneQuestion(0);
 
 
 //returne question1
