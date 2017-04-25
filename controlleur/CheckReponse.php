@@ -1,8 +1,9 @@
 <?php
 include '..\model\package.php';
 
-$index = $_GET['index'];
+
 $ReponseUser = $_GET['ReponseUser'];
+$index = ListQuestion.getIndexActuel();
 
 $LaQuestion = ListQuestion.GetUneQuestion($index);
 $LaReponse = $LaQuestion.getReponse();

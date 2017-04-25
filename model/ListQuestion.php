@@ -2,7 +2,7 @@
 class ListQuestion {
 		
 	private $LesQuestions  = array();
-	
+	private $IndexActuel ;
 	
 	
 	
@@ -25,6 +25,17 @@ class ListQuestion {
 	}
 	
 	public function GetUneQuestion($index) {
+		$this->setIndexActuel($index);
 		return $LesQuestions[$index];
 	}
+	
+	public function getIndexActuel() {
+		return $this->IndexActuel;
+	}
+	
+	public function setIndexActuel($IndexActuel) {
+		$this->IndexActuel = $IndexActuel;
+		return $this;
+	}
+	
 }
