@@ -13,6 +13,6 @@ $Question = $Liste.GetUneQuestion(1);
 
 
 //returne question1
-header('Location : ..\vue\question.php?Nom='.$unJoueur.getPrenom().'&Question='.$Question);
+header("Location : ..\vue\question.php?Nom=$unJoueur.getPrenom()&Question=$Question");
 exit();
 ?>

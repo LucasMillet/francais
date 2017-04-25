@@ -47,6 +47,11 @@ class Joueur {
 		return $this;
 	}
 	
+	public function perd1Pv() {
+		$this->vie = $this->getVie() -1;
+		return $this;
+	}
+	
 	
 	
 	
