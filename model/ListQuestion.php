@@ -7,7 +7,7 @@ class ListQuestion {
 	
 	
 	////////////////////  GET ans setter ///////
-	public function LesQuestions (){
+	public function ListQuestion(){
 		
 		$LesQuestions[0] = new Question("Combien faut-il faire de pages en synthèse ?", "4-5 Pages" , "2-3 Pages" , "5-6 Pages") ;
 		$LesQuestions[1] = new Question("Peut-on faire des citations dans la synthèse ?"," Oui !"," Non !"," ça depends .", " Que en d'où provien la citation .") ;
