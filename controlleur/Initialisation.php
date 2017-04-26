@@ -1,6 +1,7 @@
 <?php
 require '../model/package.php';
 $Liste = new  ListQuestion();
+$Liste->ListQuestionPopulated();
 
 $nomEleve = $_GET['nom'];
 $prenomEleve = $_GET['prenom'];
