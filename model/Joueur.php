@@ -9,7 +9,7 @@ class Joueur {
 	
 	
 	
-	////////////////////  GET ans setter ///////
+	////////////////////  GET and SET ///////
 	public function getNom() {
 		return $this->nom;
 	}
