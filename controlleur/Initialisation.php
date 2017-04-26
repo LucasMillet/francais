@@ -10,7 +10,7 @@ $vieDefaut = 3;
 $unJoueur = new Joueur($nomEleve, $prenomEleve, $vieDefaut);
 $nomJoueur = $unJoueur->getPrenom();
 
-$Question = $Liste->GetUneQuestion(1);
+$Question = $Liste->GetUneQuestion(0);
 
 
 //retourne question1
