@@ -1,4 +1,5 @@
 <?php
+
 require '../model/package.php';
 $Liste = new  ListQuestion();
 $Liste->ListQuestionPopulated();
@@ -10,6 +11,8 @@ $vieDefaut = 3;
 
 $unJoueur = new Joueur($nomEleve, $prenomEleve, $vieDefaut);
 $nomJoueur = $unJoueur->getPrenom();
+
+$vie = $unJoueur->getVie();
 
 $Question = $Liste->GetUneQuestion(0);
 
@@ -27,6 +30,9 @@ echo  $Erreur2."<br/>";
 echo  $Erreur3."<br/>";
 
 //retourne question1
-header("Location : ..\vue\question.php?Nom=$nomJoueur&Question=$laQuestion&Reponse=$Reponse&Erreur1=$Erreur1&Erreur2=$Erreur2&Erreur3=$Erreur3");
-exit();
+//header("Location : ..\vue\question.php?Nom=$nomJoueur&Question=$laQuestion&Reponse=$Reponse&Erreur1=$Erreur1&Erreur2=$Erreur2&Erreur3=$Erreur3");
+//exit();
+echo "<script type='text/javascript'>document.location.replace('../vue/question.php?Nom=$nomJoueur&Question=$laQuestion&Reponse=$Reponse&Erreur1=$Erreur1&Erreur2=$Erreur2&Erreur3=$Erreur3&Vie=$vie');</script>";
+
+
 ?>
