@@ -41,4 +41,12 @@ class ListQuestion {
 		return $this;
 	}
 	
+	public function countQuestions(){
+		$compteur = -1;
+		foreach ($this->LesQuestions as $question){
+			$compteur++;
+		}
+		return $compteur;
+	}
+	
 }

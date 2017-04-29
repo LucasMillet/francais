@@ -30,7 +30,7 @@
 
     <div class="container">
 
-      <form class="form-signin" action="controlleur/initialisation.php" method="get">
+      <form class="form-signin" action="../controlleur/initialisation.php" method="get">
         <h2 class="form-signin-heading">Entrer votre nom et pr&eacute;nom</h2>
         <div class="col-xs-6 col-md-6 col-md-offset-1">
         	<label for="nom">Nom :</label>
@@ -41,6 +41,9 @@
         	<input type="text" id="prenom" name="prenom" class="form-control" placeholder="" required>
     	</div>
         <div class="checkbox">
+          
+          <input type="hidden" id="vie" name="vie" value="3" />
+          <input type="hidden" id="numeroQuestion" name="numeroQuestion" value="0" />
           
         </div>
         <button class="btn btn-lg btn-primary col-md-8" type="submit" style="margin-top : 25px;">C'est parti !</button>

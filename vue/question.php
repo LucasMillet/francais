@@ -31,15 +31,26 @@
   <?php
 
 //// Réception des données /////
-$nomJoueur = $_GET['Nom'];
-$question = $_GET['Question'];
-$reponse = $_GET['Reponse'];
+$nomJoueur = $_POST['Nom'];
+$prenomJoueur = $_POST['Prenom'];
+$numeroQuestion = $_POST['numeroQuestion'];
+$question = $_POST['Question'];
+$reponse = $_POST['Reponse'];
 
-$erreur1 = $_GET['Erreur1'];
-$erreur2 = $_GET['Erreur2'];
-$erreur3 = $_GET['Erreur3'];
+$erreur1 = $_POST['Erreur1'];
+$erreur2 = $_POST['Erreur2'];
+$erreur3 = $_POST['Erreur3'];
 
-$vieActuelle = $_GET['Vie'];
+$ListeProposition = array($reponse, $erreur1, $erreur2, $erreur3);
+shuffle($ListeProposition);
+
+$proposition1 = $ListeProposition[0];
+$proposition2 = $ListeProposition[1];
+$proposition3 = $ListeProposition[2];
+$proposition4 = $ListeProposition[3];
+
+
+$vieActuelle = $_POST['Vie'];
 
 
 //// test ////
@@ -52,31 +63,36 @@ $vieActuelle = $_GET['Vie'];
 
     <div class="container">
 
-      <form class="form-signin" action="controlleur/initialisation.php" method="get">
+      <form class="form-signin" action="../controlleur/CheckReponse.php" method="post">
       <div>
-      <h3><?php echo "Nom : ". $nomJoueur ." -- Vie : ".$vieActuelle; ?></h3>
+      <h3><?php echo "Nom : ". $prenomJoueur ." -- Vie : ".$vieActuelle; ?></h3>
       </div>
-        <h2 class="form-signin-heading">Question : <?php echo $question; ?> </h2>
-        <div class="col-xs-6 col-md-6 col-md-offset-1 checkbox">
+        <h2 class="form-signin-heading">Question <?php echo $numeroQuestion+1; ?> : <?php echo $question; ?> </h2>
+        <div class="col-xs-6 col-md-6 col-md-offset-1 radio">
         	<label >
-        	<input type="checkbox" id="proposition1" name="proposition1"><?php echo $reponse; ?>
+        	<input type="radio" id="proposition" name="proposition" value="<?php echo $proposition1; ?>"><?php echo $proposition1; ?>
         	</label>
     	</div>
-    	<div class="col-xs-6 col-md-6 col-md-offset-1 checkbox">
+    	<div class="col-xs-6 col-md-6 col-md-offset-1 radio">
         	<label >
-        	<input type="checkbox" id="proposition2" name="proposition2"><?php echo $erreur1; ?>
+        	<input type="radio" id="proposition" name="proposition" value="<?php echo $proposition2; ?>"><?php echo $proposition2; ?>
         	</label>
     	</div>
-    	<div class="col-xs-6 col-md-6 col-md-offset-1 checkbox">
+    	<div class="col-xs-6 col-md-6 col-md-offset-1 radio">
         	<label >
-        	<input type="checkbox" id="proposition3" name="proposition3"><?php echo $erreur2; ?>
+        	<input type="radio" id="proposition" name="proposition" value="<?php echo $proposition3; ?>"><?php echo $proposition3; ?>
         	</label>
     	</div>
-    	<div class="col-xs-6 col-md-6 col-md-offset-1 checkbox">
+    	<div class="col-xs-6 col-md-6 col-md-offset-1 radio">
         	<label >
-        	<input type="checkbox" id="proposition4" name="proposition4"><?php echo $erreur3; ?>
+        	<input type="radio" id="proposition" name="proposition" value="<?php echo $proposition4; ?>"><?php echo $proposition4; ?>
         	</label>
     	</div>
+    	
+    	<input type="hidden" id="numeroQuestion" name="numeroQuestion" value="<?php echo $numeroQuestion; ?>" />
+    	<input type="hidden" id="nom" name="nom" value="<?php echo $nomJoueur; ?>" />
+    	<input type="hidden" id="prenom" name="prenom" value="<?php echo $prenomJoueur; ?>" />
+    	<input type="hidden" id="vie" name="vie" value="<?php echo $vieActuelle; ?>" />
     	
     	<button class="btn btn-lg btn-primary col-md-8" type="submit" style="margin-top : 25px;">V&eacute;rifier !</button>
           
