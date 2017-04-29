@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Signin Template for Bootstrap</title>
+ <title>Fran&ccedil;ais - Quizz Synth&egrave;se</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -29,6 +29,8 @@
   <body>
   
   <?php
+  
+require "../model/Vie.php";
 
 //// Réception des données /////
 $nomJoueur = $_POST['Nom'];
@@ -65,25 +67,26 @@ $vieActuelle = $_POST['Vie'];
 
       <form class="form-signin" action="../controlleur/CheckReponse.php" method="post">
       <div>
-      <h3><?php echo "Nom : ". $prenomJoueur ." -- Vie : ".$vieActuelle; ?></h3>
+      <h3>Nom : <?php echo  $prenomJoueur ?> -- Vie : <?php afficheVie($vieActuelle); ?></h3>
+      
       </div>
         <h2 class="form-signin-heading">Question <?php echo $numeroQuestion+1; ?> : <?php echo $question; ?> </h2>
-        <div class="col-xs-6 col-md-6 col-md-offset-1 radio">
+        <div class="col-xs-12 col-md-6 col-md-offset-1 radio">
         	<label >
         	<input type="radio" id="proposition" name="proposition" value="<?php echo $proposition1; ?>"><?php echo $proposition1; ?>
         	</label>
     	</div>
-    	<div class="col-xs-6 col-md-6 col-md-offset-1 radio">
+    	<div class="col-xs-12 col-md-6 col-md-offset-1 radio">
         	<label >
         	<input type="radio" id="proposition" name="proposition" value="<?php echo $proposition2; ?>"><?php echo $proposition2; ?>
         	</label>
     	</div>
-    	<div class="col-xs-6 col-md-6 col-md-offset-1 radio">
+    	<div class="col-xs-12 col-md-6 col-md-offset-1 radio">
         	<label >
         	<input type="radio" id="proposition" name="proposition" value="<?php echo $proposition3; ?>"><?php echo $proposition3; ?>
         	</label>
     	</div>
-    	<div class="col-xs-6 col-md-6 col-md-offset-1 radio">
+    	<div class="col-xs-12 col-md-6 col-md-offset-1 radio">
         	<label >
         	<input type="radio" id="proposition" name="proposition" value="<?php echo $proposition4; ?>"><?php echo $proposition4; ?>
         	</label>
@@ -94,7 +97,7 @@ $vieActuelle = $_POST['Vie'];
     	<input type="hidden" id="prenom" name="prenom" value="<?php echo $prenomJoueur; ?>" />
     	<input type="hidden" id="vie" name="vie" value="<?php echo $vieActuelle; ?>" />
     	
-    	<button class="btn btn-lg btn-primary col-md-8" type="submit" style="margin-top : 25px;">V&eacute;rifier !</button>
+    	<button class="btn btn-lg btn-primary col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">V&eacute;rifier !</button>
           
         
       </form>

@@ -10,8 +10,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Signin Template for Bootstrap</title>
-
+  <title>Fran&ccedil;ais - Quizz Synth&egrave;se</title>
+ 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -29,17 +29,20 @@
   <body>
   
   <?php
+  
+require '../model/Vie.php';
 
 //// Réception des données /////
 $nomJoueur = $_GET['nom'];
 $prenomJoueur = $_GET['prenom'];
 $vieActuelle = $_GET['vie'];
+
 ?>
 	<div class="container">
     	<div>
-      		<h3><?php echo "Nom : ". $prenomJoueur ." -- Vie : ".$vieActuelle; ?></h3>
+      		<h3>Nom : <?php echo  $prenomJoueur ?> -- Vie : <?php afficheVie($vieActuelle); ?></h3>
     	</div>
-    	<div class="col-xs-6 col-md-6 col-md-offset-1">
+    	<div class="col-xs-12 col-md-6 col-md-offset-1">
     	<?php
     	if (isset($_GET['message']))
 			echo $_GET['message'];
@@ -47,11 +50,11 @@ $vieActuelle = $_GET['vie'];
 			echo "&nbsp;";
 		?>
 		</div>
-		<div class="col-xs-6 col-md-6 col-md-offset-1">
+		<div class="col-xs-12 col-md-6 col-md-offset-1">
       		<h3>F&eacute;licitation, vous avez r&eacute;pondu au quizz avec succ&egrave;s !</h3>
       		<h4>Vous &ecirc;tes pr&ecirc;t &agrave; affronter l'&eacute;preuve de synth&egrave;se de fran&ccedil;ais :p</h4>
     	</div>
-    	<a href="accueil.php"><button class="btn btn-lg btn-success col-md-8" type="submit" style="margin-top : 25px;">Lancer une nouvelle partie</button></a>
+    	<a href="accueil.php"><button class="btn btn-lg btn-success col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">Lancer une nouvelle partie</button></a>
     </div> <!-- /container -->
 	
 
