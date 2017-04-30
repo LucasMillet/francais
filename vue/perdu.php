@@ -32,7 +32,7 @@
   
 require '../model/Vie.php';
 
-//// Réception des données /////
+//// Rï¿½ception des donnï¿½es /////
 $nomJoueur = $_GET['nom'];
 $prenomJoueur = $_GET['prenom'];
 $vieActuelle = $_GET['vie'];
@@ -54,7 +54,7 @@ $numeroQuestion = $_GET['numeroQuestion'];
 		<div class="col-xs-12 col-md-6 col-md-offset-1">
       		<h3 style="color:red">Vous avez perdu !</h3>
     	</div>
-    	<?php echo '<a href="../controlleur/initialisation.php?nom='.$nomJoueur.'&prenom='.$prenomJoueur.'&numeroQuestion='.$numeroQuestion.'&vie='.$vieActuelle.'">';?> <button class="btn btn-lg btn-danger col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">Recommencer !</button></a>
+    	<?php echo '<a href="../controlleur/Initialisation.php?nom='.$nomJoueur.'&prenom='.$prenomJoueur.'&numeroQuestion='.$numeroQuestion.'&vie='.$vieActuelle.'">';?> <button class="btn btn-lg btn-danger col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">Recommencer</button></a>
     </div> <!-- /container -->
 	
 

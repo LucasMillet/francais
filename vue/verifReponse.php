@@ -31,7 +31,7 @@
   <?php
 require '../model/Vie.php';
   
-//// Réception des données /////
+//// RÃ©ception des donnÃ©es /////
 $nomJoueur = $_GET['nom'];
 $prenomJoueur = $_GET['prenom'];
 $vieActuelle = $_GET['vie'];
@@ -51,7 +51,7 @@ $numeroQuestion = $_GET['numeroQuestion'];
 			echo "&nbsp;";
 		?>
 		</div>
-    	<?php echo '<a href="../controlleur/Initialisation.php?nom='.$nomJoueur.'&prenom='.$prenomJoueur.'&numeroQuestion='.$numeroQuestion.'&vie='.$vieActuelle.'">';?> <button class="btn btn-lg btn-info col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">Continuer !</button></a>
+    	<?php echo '<a href="../controlleur/Initialisation.php?nom='.$nomJoueur.'&prenom='.$prenomJoueur.'&numeroQuestion='.$numeroQuestion.'&vie='.$vieActuelle.'">';?> <button class="btn btn-lg btn-info col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">Continuer</button></a>
     </div> <!-- /container -->
 	
 

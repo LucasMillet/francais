@@ -33,7 +33,7 @@
   
 require "../model/Vie.php";
 
-//// Réception des données /////
+//// Rï¿½ception des donnï¿½es /////
 $nomJoueur = $_POST['Nom'];
 $prenomJoueur = $_POST['Prenom'];
 $numeroQuestion = $_POST['numeroQuestion'];
@@ -97,7 +97,7 @@ $vieActuelle = $_POST['Vie'];
     	<input type="hidden" id="prenom" name="prenom" value="<?php echo $prenomJoueur; ?>" />
     	<input type="hidden" id="vie" name="vie" value="<?php echo $vieActuelle; ?>" />
     	
-    	<button class="btn btn-lg btn-primary col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">V&eacute;rifier !</button>
+    	<button class="btn btn-lg btn-primary col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">V&eacute;rifier</button>
           
         
       </form>

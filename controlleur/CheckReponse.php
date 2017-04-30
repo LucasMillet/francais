@@ -19,10 +19,10 @@ $bonneReponse = $laQuestion->getReponse();
 
 if (trim($reponseUser) == trim($bonneReponse)){
 	if($numeroQuestion == $Liste->countQuestions()){
-		echo "<meta http-equiv='refresh' content='0;url=../vue/gagne.php?nom=".$nom."&prenom=".$prenom."&vie=".$vie."&message=<font color=green>Bravo ! La bonne reponse &eacute;tait bien : &laquo;".$reponseUser."&raquo;</font>'>";
+		echo "<meta http-equiv='refresh' content='0;url=../vue/gagne.php?nom=".$nom."&prenom=".$prenom."&vie=".$vie."&message=<font color=green>Bravo ! La bonne réponse &eacute;tait bien : &laquo;".$reponseUser."&raquo;</font>'>";
 	} else {
 	$numeroQuestion++;
-	echo "<meta http-equiv='refresh' content='0;url=../vue/verifReponse.php?bonneReponse=True&nom=".$nom."&prenom=".$prenom."&vie=".$vie."&numeroQuestion=$numeroQuestion&message=<font color=green>Bravo ! La bonne reponse &eacute;tait bien : &laquo;".$reponseUser."&raquo;</font>'>";
+	echo "<meta http-equiv='refresh' content='0;url=../vue/verifReponse.php?bonneReponse=True&nom=".$nom."&prenom=".$prenom."&vie=".$vie."&numeroQuestion=$numeroQuestion&message=<font color=green>Bravo ! La bonne réponse &eacute;tait bien : &laquo;".$reponseUser."&raquo;</font>'>";
 	}
 } else {
 	$Joueur->perd1Pv();
