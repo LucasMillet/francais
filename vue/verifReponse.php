@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -51,7 +51,7 @@ $numeroQuestion = $_GET['numeroQuestion'];
 			echo "&nbsp;";
 		?>
 		</div>
-    	<?php echo '<a href="../controlleur/initialisation.php?nom='.$nomJoueur.'&prenom='.$prenomJoueur.'&numeroQuestion='.$numeroQuestion.'&vie='.$vieActuelle.'">';?> <button class="btn btn-lg btn-info col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">Continuer !</button></a>
+    	<?php echo '<a href="../controlleur/Initialisation.php?nom='.$nomJoueur.'&prenom='.$prenomJoueur.'&numeroQuestion='.$numeroQuestion.'&vie='.$vieActuelle.'">';?> <button class="btn btn-lg btn-info col-xs-10 col-md-8 col-xs-offset-1" type="submit" style="margin-top : 25px;">Continuer !</button></a>
     </div> <!-- /container -->
 	
 

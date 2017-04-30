@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; utf-8" />
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -30,7 +30,7 @@
 
     <div class="container">
 
-      <form class="form-signin" action="../controlleur/initialisation.php" method="get">
+      <form class="form-signin" action="../controlleur/Initialisation.php" method="get">
         <h2 class="form-signin-heading">Entrer votre nom et pr&eacute;nom</h2>
         <div class="col-xs-6 col-md-6 col-md-offset-1">
         	<label for="nom">Nom :</label>
